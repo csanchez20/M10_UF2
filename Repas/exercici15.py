@@ -1,7 +1,7 @@
 numeros = []
 
 while True:
-    num = input("Introdueix un número (o 0 per acabar): ")
+    num = input("Introduce un número (o 0 para acabar): ")
 
     if num == "0":
         break 
@@ -9,16 +9,13 @@ while True:
     try:
         numeros.append(int(num))
     except ValueError:
-        print("Si us plau, introdueix només números.")
+        print("Por favor, introduce solo numeros")
 
-seleccion = input("¿Vols ordenar de forma (ascendent) o (descendent)? ").lower()
+seleccion = input("¿Ordenarlo de forma (ascendente) o (descendiente)? ").lower()
 
-if seleccion == "ascendent":
+if seleccion == "ascendente":
     numeros_ordenados = tuple(sorted(numeros))
-elif seleccion == "descendent":
+elif seleccion == "descendiente":
     numeros_ordenados = tuple(sorted(numeros, reverse=True))
-else:
-    print("Selecció no vàlida. S'ordenarà de forma predeterminada (ascendent).")
-    numeros_ordenados = tuple(sorted(numeros))
 
 print("Tupla ordenada:", numeros_ordenados)
